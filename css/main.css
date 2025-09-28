@@ -1,7 +1,7 @@
 /* 프로필 영역 */
 .navigation .navigation-profile {
     grid-column: 1;
-    grid-row: 1 / 3; /* 1번 행부터 3번 행까지 (전체) */
+    grid-row: 1 / 3;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
     color: white;
@@ -21,6 +21,75 @@
     grid-column: 2;
     grid-row: 2;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 15px;
+    padding: 8px; /* 상하좌우 동일하게 */
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+/* 메뉴 그리드 - 3×2 배치 */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+/* 메뉴 버튼 스타일 - 전체 공간 활용 */
+.menu-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* 핵심 수정사항 */
+    padding: 0; /* 패딩 제거 */
+    width: 100%; /* 그리드 셀 전체 너비 */
+    height: 100%; /* 그리드 셀 전체 높이 */
+    /* min-height 제거 */
+
+    transition: all 0.2s ease;
+    backdrop-filter: blur(5px);
+    box-sizing: border-box;
+}
+
+.menu-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.menu-button:active {
+    transform: translateY(0);
+}
+
+/* 메뉴 아이콘 */
+.menu-icon {
+    font-size: 1.4em; /* 크기 약간 조정 */
+    margin-bottom: 4px; /* 간격 줄이기 */
+    display: block;
+}
+
+/* 메뉴 라벨 */
+.menu-label {
+    font-size: 0.8em; /* 크기 약간 조정 */
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.1;
+}
+
+/* 호버 색상 */
+.menu-button.music:hover { background: rgba(255, 107, 107, 0.3); }
+.menu-button.video:hover { background: rgba(74, 144, 226, 0.3); }
+.menu-button.games:hover { background: rgba(120, 224, 143, 0.3); }
+.menu-button.news:hover { background: rgba(255, 206, 84, 0.3); }
+.menu-button.wifi:hover { background: rgba(162, 155, 254, 0.3); }
+.menu-button.settings:hover { background: rgba(158, 158, 158, 0.3); }
