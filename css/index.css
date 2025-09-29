@@ -24,41 +24,36 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 
-
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
 
 /* 헤더 영역 */
-.navigation .navigation-header {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-
-    padding: 15px 20px;
+.navigation-header {
+    height: 10%;
+    padding: 0 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     flex-shrink: 0;
+    box-sizing: border-box;
 }
 
 /* 메인 화면 영역 */
 .navigation-screen {
+    height: 80%;
     flex: 1;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 2px;
     background: rgba(255, 255, 255, 0.1);
 }
 
 /* 푸터 영역 */
 .navigation-footer {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 15px 20px;
+    height: 10%;
+    padding: 0 20px;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     flex-shrink: 0;
+    box-sizing: border-box;
 }
