@@ -24,7 +24,8 @@ function handleMenuClick(menuType) {
     console.log(`${menuType} 메뉴가 클릭되었습니다.`);
 
     switch(menuType) {
-        case 'music':
+        case 'mypage':
+            window.location.href = 'portfolio.html';
             break;
         case 'video':
             break;

@@ -93,7 +93,7 @@
 }
 
 /* 호버 색상 */
-.menu-button.music:hover { background: rgba(255, 107, 107, 0.3); }
+.menu-button.mypage:hover { background: rgba(255, 107, 107, 0.3); }
 .menu-button.video:hover { background: rgba(74, 144, 226, 0.3); }
 .menu-button.games:hover { background: rgba(120, 224, 143, 0.3); }
 .menu-button.news:hover { background: rgba(255, 206, 84, 0.3); }
